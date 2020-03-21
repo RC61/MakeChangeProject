@@ -57,32 +57,32 @@ public class MakeChangeApp {
 
 		while (change != 0) {
 
-			if (change > 2000) {
+			if (change >= 2000) {
 				change -= 2000;
 				twenty++;
 			}
 
-			else if (change > 1000) {
+			else if (change >= 1000) {
 				change -= 1000;
 				ten++;
 			} 
-			else if (change > 500) {
+			else if (change >= 500) {
 				change -= 500;
 				five++;
 			}
-			else if (change > 100) {
+			else if (change >= 100) {
 				change -= 100;
 				one++;
 			} 
-			else if (change > 25) {
+			else if (change >= 25) {
 				change -= 25;
 				quarter++;
 			} 
-			else if (change > 10) {
+			else if (change >= 10) {
 				change -= 10;
 				dime++;
 			} 
-			else if (change > 5) {
+			else if (change >= 5) {
 				change -= 5;
 				nickel++;
 			} 
