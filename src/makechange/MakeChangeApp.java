@@ -129,7 +129,7 @@ public class MakeChangeApp {
 			System.out.println(quarter + ": Quarter");
 		}
 		else if (quarter > 1) {
-			System.out.println(quarter + ": Quarter");
+			System.out.println(quarter + ": Quarters");
 		}
 		if (dime == 1) {
 			System.out.println(dime + ": Dime");
