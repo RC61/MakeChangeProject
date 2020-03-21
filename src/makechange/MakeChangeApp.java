@@ -6,18 +6,18 @@ public class MakeChangeApp {
 
 //	User Story #1
 //	The user is prompted
-//	asking for the price of the item. CHECK--------------------------
+//	asking for the price of the item. --------------------------DONE--------
 //
 //	User Story #2
 //	The user is then prompted asking 
-//	how much money was tendered by the customer. CHECK----------------
+//	how much money was tendered by the customer. ----------------DONE-------
 //
 //	User Story #3
 //	Display an appropriate message if the customer 
-//	provided too little money or the exact amount. CHECK--------------
+//	provided too little money or the exact amount. ---------------DONE------
 //
 //	User Story #4
-//	If the amount tendered is more than the cost of the item, 
+//	If the amount tendered is more than the cost of the item, ----DONE------
 //	display the number of bills and coins that should be given to the customer.
 
 	public static void main(String[] args) {
@@ -49,8 +49,7 @@ public class MakeChangeApp {
 
 		
 	public static void GIMMECHANGE(int change) {
-		System.out.println("Looks like i owe you..." );
-		System.out.println(change);
+		System.out.println("Looks like I owe you..." );
 		
 		int penny = 0;
 		int nickel = 0;
@@ -124,20 +123,7 @@ public class MakeChangeApp {
 		int cents = pennyD + nickelD + dimeD + quarterD;
 		int dollars = fiveD + tenD + twentyD;
 		String $dollars$ = "$" + dollars;
-		
-//		int tenthCent = 0;
-//		int hundredCent = 0;
-//		while (penny > 0 || nickel > 0) {
-//			if (nickel != 0) {
-//				nickel--;
-//				hundredCent += 5;
-//			}
-//			else if (penny != 0) {
-//				penny--;
-//				hundredCent+= 1;
-//			}
-//		}
-//		System.out.println("Which is " + $dollars$ + "." + tenthCent + hundredCent);
+
 		
 		System.out.println("Which is " + $dollars$ + "." + cents + " in change");
 		
