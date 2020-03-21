@@ -61,7 +61,6 @@ public class MakeChangeApp {
 				change -= 2000;
 				twenty++;
 			}
-
 			else if (change >= 1000) {
 				change -= 1000;
 				ten++;
@@ -94,7 +93,6 @@ public class MakeChangeApp {
 				System.out.println("I dont know whats going on here.");
 				change = 0;
 			}
-
 		}
 		
 		String sBill = "dollar bill";
@@ -149,34 +147,30 @@ public class MakeChangeApp {
 		else if (penny > 1) {
 			System.out.println(penny + ": Pennies");
 		}
-
-		
-		
-		
 		
 
+		int pennyVal = (penny * 1);
+		int nickelVal = (nickel * 5);
+		int dimeVal = (dime * 10);
+		int quarterVal = (quarter * 25);
+		int dollarVal = (one * 1);
+		int fiveVal = (five * 5);
+		int tenVal = (ten * 10);
+		int twentyVal = (twenty * 20);
+		int cents = (pennyVal + nickelVal + dimeVal + quarterVal);
+		int dollars = dollarVal + fiveVal + tenVal + twentyVal;
+		String $dollars$ = "$" + dollars;
 		
-		
-
-//		int pennyVal = (penny * 1);
-//		int nickelVal = (nickel * 5);
-//		int dimeVal = (dime * 10);
-//		int quarterVal = (quarter * 25);
-//		int dollarVal = (dollar * 1);
-//		int fiveVal = (five * 5);
-//		int tenVal = (ten * 10);
-//		int twentyVal = (twenty * 20);
-//		int cents = pennyVal + nickelVal + dimeVal + quarterVal;
-//		int dollars = dollarVal + fiveVal + tenVal + twentyVal;
-//		String $dollars$ = "$" + dollars;
-//
-//		System.out.println("Which is " + $dollars$ + "." + cents + " in change");
-//		I need to Fix the above line. Cannot get change to print correctly
+		if (cents >= 10) {
+		System.out.println("Which is " + $dollars$ + "." + cents + " in change");
+		}
+		else if (cents <10) {
+			System.out.println("Which is " + $dollars$ + ".0" + cents+ " in change");
+		}
 
 	}
 
 	public static void GIMMEMONIES(double payment, double price) {
-//		double notEnough = (price - payment);
 		System.out.println("Nah chief. Thats not enough to cover your purchase.");
 	}
 
