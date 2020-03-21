@@ -32,18 +32,17 @@ public class MakeChangeApp {
 		kb.close();
 
 		if (payment > price) {
-			GIMMECHANGE(change);
+			youNeedChange(change);
 		} else if (payment < price) {
-			GIMMEMONIES(payment, price);
+			iNeedMoreMoney(payment, price);
 		} else if (payment == price) {
 			BreakEven();
 		} else {
 			System.out.println("Don't make me throw you out of my store...");
 		}
-
 	}
 
-	public static void GIMMECHANGE(int change) {
+	public static void youNeedChange(int change) {
 		System.out.println("Looks like I owe you...");
 
 		int penny = 0;
@@ -103,7 +102,6 @@ public class MakeChangeApp {
 		else if (twenty > 1) {
 			System.out.println(twenty + ": Twenty " + sBill + "s");
 		}
-		
 		if (ten == 1) {
 			System.out.println(ten + ": Ten " + sBill);
 		}
@@ -116,7 +114,6 @@ public class MakeChangeApp {
 		else if (five > 1) {
 			System.out.println(five + ": Five " + sBill + "s");
 		}
-
 		if (one == 1) {
 			System.out.println(one + ": One " + sBill);
 		}
@@ -148,7 +145,6 @@ public class MakeChangeApp {
 			System.out.println(penny + ": Pennies");
 		}
 		
-
 		int pennyVal = (penny * 1);
 		int nickelVal = (nickel * 5);
 		int dimeVal = (dime * 10);
@@ -170,7 +166,7 @@ public class MakeChangeApp {
 
 	}
 
-	public static void GIMMEMONIES(double payment, double price) {
+	public static void iNeedMoreMoney(double payment, double price) {
 		System.out.println("Nah chief. Thats not enough to cover your purchase.");
 	}
 
