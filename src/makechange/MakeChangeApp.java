@@ -22,116 +22,164 @@ public class MakeChangeApp {
 
 	public static void main(String[] args) {
 		Scanner kb = new Scanner(System.in);
-		
 
 		System.out.print("What is the price of your purchase? $");
 		double price = kb.nextDouble();
 		System.out.print("How much money are you using to pay for your purchase? $");
 		double payment = kb.nextDouble();
-		int change = (int) (100*(payment) - (100*(price)));
-		
+		int change = (int) (100 * (payment) - (100 * (price)));
+
 		kb.close();
-		
+
 		if (payment > price) {
 			GIMMECHANGE(change);
-		}
-		else if (payment < price) {
+		} else if (payment < price) {
 			GIMMEMONIES(payment, price);
-		}
-		else if (payment == price) {
+		} else if (payment == price) {
 			BreakEven();
-		}
-		else {
+		} else {
 			System.out.println("Don't make me throw you out of my store...");
 		}
-		
+
 	}
 
-		
 	public static void GIMMECHANGE(int change) {
-		System.out.println("Looks like I owe you..." );
-		
+		System.out.println("Looks like I owe you...");
+
 		int penny = 0;
 		int nickel = 0;
 		int dime = 0;
 		int quarter = 0;
-		int dollar = 0;
+		int one = 0;
 		int five = 0;
 		int ten = 0;
 		int twenty = 0;
-	
 
 		while (change != 0) {
+
+			if (change > 2000) {
+				change -= 2000;
+				twenty++;
+			}
+
+			else if (change > 1000) {
+				change -= 1000;
+				ten++;
+			} 
+			else if (change > 500) {
+				change -= 500;
+				five++;
+			}
+			else if (change > 100) {
+				change -= 100;
+				one++;
+			} 
+			else if (change > 25) {
+				change -= 25;
+				quarter++;
+			} 
+			else if (change > 10) {
+				change -= 10;
+				dime++;
+			} 
+			else if (change > 5) {
+				change -= 5;
+				nickel++;
+			} 
+			else if (change >= 1) {
+				change -= 1;
+				penny++;
+			} 
+			else {
+				System.out.println("I dont know whats going on here.");
+				change = 0;
+			}
+
+		}
 		
-		if (change > 2000) {
-			change -= 2000;
-			twenty++;
-		}	
+		String sBill = "dollar bill";
 		
-		else if (change > 1000) {
-			change -= 1000;
-			ten++;
+		if (twenty == 1) {
+			System.out.println(twenty + ": Twenty " + sBill);
 		}
-		else if (change > 500) {
-			change -= 500;
-			five++;
+		else if (twenty > 1) {
+			System.out.println(twenty + ": Twenty " + sBill + "s");
 		}
 		
-		else if (change > 100) {
-			change -= 100;
-			dollar++;
+		if (ten == 1) {
+			System.out.println(ten + ": Ten " + sBill);
 		}
-		else if (change > 25) {
-			change -= 25;
-			quarter++;
+		else if (ten > 1) {
+			System.out.println(ten + ": Ten " + sBill + "s");
 		}
-		else if (change > 10) {
-			change -= 10;
-			dime++;
+		if (five == 1) {
+			System.out.println(five + ": Five " + sBill);
 		}
-		else if (change > 5) {
-			change -= 5;
-			nickel++;
+		else if (five > 1) {
+			System.out.println(five + ": Five " + sBill + "s");
 		}
-		else if (change >= 1) {
-			change -= 1;
-			penny++;
+
+		if (one == 1) {
+			System.out.println(one + ": One " + sBill);
 		}
-		else {
-			System.out.println("I dont know whats going wrong.");
-			change = 0;
+		else if (one > 1) {
+			System.out.println(one + ": One " + sBill + "s");
 		}
-		
+		if (quarter == 1) {
+			System.out.println(quarter + ": Quarter");
 		}
-		System.out.println(twenty + ": Twentie(s)");
-		System.out.println(ten + ": Ten(s)");
-		System.out.println(five + ": Five(s)");
-		System.out.println(dollar + ": Single(s)");
-		System.out.println(quarter + ": Quarter(s)");
-		System.out.println(dime + ": Dime(s)");
-		System.out.println(nickel + ": Nickle(s)");
-		System.out.println(penny + ": Pennie(s)");
-		
-		int pennyD = (penny *1);
-		int nickelD = (nickel * 5);
-		int dimeD = (dime * 10);
-		int quarterD = (quarter * 25);
-		int dollarD = (dollar * 1);
-		int fiveD = (five * 5);
-		int tenD = (ten * 10);
-		int twentyD = (twenty * 20);
-		int cents = pennyD + nickelD + dimeD + quarterD;
-		int dollars = fiveD + tenD + twentyD;
-		String $dollars$ = "$" + dollars;
+		else if (quarter > 1) {
+			System.out.println(quarter + ": Quarter");
+		}
+		if (dime == 1) {
+			System.out.println(dime + ": Dime");
+		}
+		else if (dime > 1) {
+			System.out.println(dime + ": Dimes");
+		}
+		if (nickel == 1) {
+			System.out.println(nickel + ": Nickel");
+		}
+		else if (nickel > 1) {
+			System.out.println(nickel + ": Nickels");
+		}
+		if (penny == 1) {
+			System.out.println(penny + ": Penny");
+		}
+		else if (penny > 1) {
+			System.out.println(penny + ": Pennies");
+		}
 
 		
-		System.out.println("Which is " + $dollars$ + "." + cents + " in change");
 		
+		
+		
+
+		
+		
+
+//		int pennyVal = (penny * 1);
+//		int nickelVal = (nickel * 5);
+//		int dimeVal = (dime * 10);
+//		int quarterVal = (quarter * 25);
+//		int dollarVal = (dollar * 1);
+//		int fiveVal = (five * 5);
+//		int tenVal = (ten * 10);
+//		int twentyVal = (twenty * 20);
+//		int cents = pennyVal + nickelVal + dimeVal + quarterVal;
+//		int dollars = dollarVal + fiveVal + tenVal + twentyVal;
+//		String $dollars$ = "$" + dollars;
+//
+//		System.out.println("Which is " + $dollars$ + "." + cents + " in change");
+//		I need to Fix the above line. Cannot get change to print correctly
+
 	}
+
 	public static void GIMMEMONIES(double payment, double price) {
-		double notEnough = (price - payment);
+//		double notEnough = (price - payment);
 		System.out.println("Nah chief. Thats not enough to cover your purchase.");
 	}
+
 	public static void BreakEven() {
 		System.out.println("Looks like we're good. Thank you for shopping with us.");
 	}
