@@ -1,6 +1,9 @@
 ## Make Change Project - Week 1 Skill Distillery 
 
 ### Overview
+The first homework assignment:
+This program is used to create the correct amount of change from a given purchase.
+Aside from "Scanner" there were no imported features used in the making of this program.
 
 ### Technologies Used
 -Eclipse
